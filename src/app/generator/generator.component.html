@@ -1,0 +1,60 @@
+<div class="app">
+    <div class="container">
+        <div>
+            <div>
+                <div class="card drop-shadow">
+                    <form>
+                        <div class="form-group">
+                            <label for="">Select an image</label>
+                            <input
+                             type="file" 
+                             class="form-control" 
+                             accept="image/*"
+                             (change) = 'preview($event)'>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Top Text</label>
+                            <input 
+                              [(ngModel)]="topText"
+                              (keyup)="drawText()"
+                              type="text"
+                              class="form-control" 
+                              name="topText">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Bottom Text</label>
+                            <input
+                            [(ngModel)]="bottomText"
+                            (keyup)="drawText()" 
+                            type="text"  
+                            class="form-control" 
+                            name="bottomText">
+                        </div>
+                        <div class="color-pickers">
+                            <div>
+                                <div class="form-group">
+                                    <label for="">Text Color</label>
+                                    <color-chrome (onChangeComplete)="canvasTextColor($event)"> </color-chrome>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-group">
+                                    <label for="">Background Color</label>
+                                    <color-chrome (onChangeComplete)="canvasBgColor($event)"> </color-chrome>
+                                </div>
+                            </div>
+                        </div>
+                        <button #myBtn (click)="downloadImg()">Download</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        
+    <div class="canvas">
+        <canvas class="drop-shadow" #memeCanvas width="700" height="800"></canvas>
+    </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,64 @@
+.card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 50px;
+    background: whitesmoke;
+    width: 700px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.canvas{
+    margin-top: 50px;
+}
+
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-group{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 0px;
+    flex-direction: column;
+}
+.form-group label{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #777;
+}
+.form-group input{
+    outline: none;
+    border: none;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.color-pickers{
+    display: flex;
+    gap: 10px;
+}
+button{
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid lightblue;
+    color: rgb(67, 96, 105);
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 5px 0;
+}
+button:hover{
+    
+}
+canvas{
+    background-color: #fdfdfd;
+}
